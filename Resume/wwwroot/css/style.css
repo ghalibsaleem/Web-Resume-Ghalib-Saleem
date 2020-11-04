@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /*
 /*	Copyright (c) 2020 Marketify
 /*	Author: Marketify
@@ -580,11 +580,11 @@ img.svg{
 	margin-bottom: 70px;
 }
 .shane_tm_about .main_infos .left{
-	width: 60%;
+	width: 56%;
 	padding-right: 50px;
 }
 .shane_tm_about .main_infos .right{
-	width: 40%;
+	width: 44%;
 	padding-left: 50px;
 }
 .shane_tm_about .main_infos .right ul{

@@ -657,7 +657,12 @@ function shane_tm_contact_form(){
 		}
 		else{
 			// Returns successful data submission message when the entered information is stored in database.
-			jQuery.post("modal/contact.php",{ ajax_name: name, ajax_email: email, ajax_message:message, ajax_subject: subject}, function(data) {
+			$.ajaxSetup({
+				headers: {
+					'XSRF-TOKEN': $('input:hidden[name="__RequestVerificationToken"]').val()
+				}
+			});
+			jQuery.post("/Index?handler=SendMail", { name: name, email: email, message: message, subject: subject }, function (data) {
 				
 				jQuery(".contact_form .returnmessage").append(data);//Append returned message to message paragraph
 				
